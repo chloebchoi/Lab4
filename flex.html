@@ -1,9 +1,9 @@
 <!--
 =========================================================
-Name        : index.html
+Name        : flex.html
 Assignment  : Lab 4 Exercise C
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Chloe Choi, Fateh Ali Syed Bukhari
+Submission  : February 6th, 2024
 Description : Flex Layouts.
 =========================================================
 -->
@@ -15,8 +15,9 @@ Description : Flex Layouts.
 		Ensure that your HTML file includes the viewport meta tag in the <head> section. 
 		This tag is essential for responsive design as it tells the browser how to control the page's dimensions and scaling.
 	-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!--
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
@@ -35,6 +36,8 @@ Description : Flex Layouts.
 			border: 1px solid yellow;	
 		}		
 	</style>
+	-->
+
 
 	<style>
 		/* CSS for menu. You don't need to touch this part */
@@ -69,49 +72,78 @@ Description : Flex Layouts.
         img { max-width: 100%; height: auto; }
         .container { 
 			/*I need some CSS codes.*/
+			display:flex;
+			flex-direction: column;
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
 			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: row;
+			
+			
 		}
         .main { 
 			padding: 15px; 
 			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: column;
+
 		}
         
         .news-item { padding: 10px; }
         .row { 
 			/*I need some CSS codes.*/
+			display:flex;
+			flex-wrap: wrap;
+			flex-direction: wrap;
+
 		}
         
 
         @media screen and (min-width: 769px) {
-            .menu { width: 150px; }     
+            .menu { width: 150px; }  
 			.large { 
 				/*I need some CSS codes.*/
+				width: 100%;
 			}
 			.medium { 
 				/*I need some CSS codes.*/
+				width: 70%;
 			}
 			.small { 
 				/*I need some CSS codes.*/
+				width: 30%;
 			 }       
         }
 
         @media screen and (max-width: 768px) {
 			.body { 
 				/*I need some CSS codes.*/
+				flex-direction: column;
 			}
             .menu ul { 
 				/*I need some CSS codes.*/
-			 }            
+				flex-direction: row;
+			}
+			.large { 
+				width: 100%;
+			}
+			.medium { 
+				width: 60%;
+			}
+			.small { 
+				width: 40%;
+			}   
             /*I need some CSS codes.*/
+
         }
 
         @media screen and (max-width: 480px) {
             .news-item header h1 { font-size: 18px; }
             .medium, .small { 
 				/*I need some CSS codes.*/
+				width: 100%;
 			 }
         }
     </style>
@@ -170,7 +202,7 @@ Description : Flex Layouts.
 					<!-- Medium news item -->
 					<div class="medium news-item">
 						<header>
-							<h1>Your Name Takes a Historic Spacewalk Near the ISS</h1>
+							<h1>Chloe Choi Takes a Historic Spacewalk Near the ISS</h1>
 						</header>
 						<img src="images/medium.jpg" alt="Medium Image">
 						<article>
