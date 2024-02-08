@@ -1,6 +1,6 @@
 <!--
 =========================================================
-Name        : index.html
+Name        : flex.html
 Assignment  : Lab 4 Exercise C
 Author(s)   : Fateh Syed Bukhari, Chloe Choi
 Submission  : Feb 7, 2024
@@ -15,8 +15,33 @@ Description : Flex Layouts.
 		Ensure that your HTML file includes the viewport meta tag in the <head> section. 
 		This tag is essential for responsive design as it tells the browser how to control the page's dimensions and scaling.
 	-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<<<<<<< HEAD
+=======
+	<!--
+	<style>	
+		/* Remove borders at the end, they have been add just for detecting positions of items*/	
+		div {
+			border: 0px dashed gray;	
+		}
+		.row{ 
+			border: 0px solid red;			
+		}
+		.large {
+			border: 0px solid blue;	
+		}
+		.medium {
+			border: 0px solid green;	
+		}
+		.small {
+			border: 0px solid yellow;	
+		}		
+	</style>
+	-->
+
+
+>>>>>>> d283eb1a3242e70702c94527374c8ed1eb2fe7f8
 	<style>
 		/* CSS for menu. You don't need to touch this part */
 		.menu { background-color: #e6e6e6; }
@@ -50,30 +75,37 @@ Description : Flex Layouts.
         img { max-width: 100%; height: auto; }
         .container { 
 			/*I need some CSS codes.*/
-			display: flex;
+			display:flex;
 			flex-direction: column;
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
 			/*I need some CSS codes.*/
 			display: flex;
+			flex-direction: row;
+			
+			
 		}
         .main { 
 			padding: 15px; 
 			/*I need some CSS codes.*/
 			display: flex;
 			flex-direction: column;
+
 		}
         
         .news-item { padding: 10px; }
         .row { 
 			/*I need some CSS codes.*/
-			display: flex;
+			display:flex;
+			flex-wrap: wrap;
+			flex-direction: wrap;
+
 		}
         
 
         @media screen and (min-width: 769px) {
-            .menu { width: 150px; }     
+            .menu { width: 150px; }  
 			.large { 
 				/*I need some CSS codes.*/
 				width: 100%;
@@ -95,10 +127,8 @@ Description : Flex Layouts.
 			}
             .menu ul { 
 				/*I need some CSS codes.*/
-				display: flex;
 				flex-direction: row;
-			 }            
-            /*I need some CSS codes.*/
+			}
 			.large { 
 				width: 100%;
 			}
@@ -107,7 +137,9 @@ Description : Flex Layouts.
 			}
 			.small { 
 				width: 40%;
-			 }
+			}   
+            /*I need some CSS codes.*/
+
         }
 
         @media screen and (max-width: 480px) {
